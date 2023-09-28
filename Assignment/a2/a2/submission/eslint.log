@@ -1,0 +1,15 @@
+
+> web222-assignment-2@7.0.0 eslint
+> eslint src/**/*.js
+
+
+C:\Users\User\Desktop\3rd semester\WEB222\Assignment\a2\a2\src\observations.js
+  176:8   error  'item' is not defined  no-undef
+  178:24  error  'item' is not defined  no-undef
+  178:75  error  'item' is not defined  no-undef
+  180:7   error  'item' is not defined  no-undef
+  182:7   error  'item' is not defined  no-undef
+  184:26  error  'item' is not defined  no-undef
+
+✖ 6 problems (6 errors, 0 warnings)
+

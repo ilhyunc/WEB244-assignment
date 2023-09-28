@@ -1,0 +1,282 @@
+<!-- Your main page should go here -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      p {
+        margin-bottom: 20px;
+      }
+
+      .audio-button {
+        background-color: #f44336;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      button {
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+
+      hr {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border: 0;
+        border-top: 1px solid #ccc;
+      }
+
+      figure {
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      figcaption {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .video-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      iframe {
+        width: 100%;
+        height: 400px;
+      }
+
+      blockquote {
+        margin-left: 10px;
+        padding-left: 10px;
+        border-left: 3px solid #87ceeb;
+      }
+    </style>
+  </head>
+  <body class="centered-content">
+    <audio id="Audio" src="./sound.mp3" autoplay></audio>
+    <button id="audioButton" class="audio-button" onclick="toggleAudio()">Audio</button>
+
+    <script>
+      var audio = document.getElementById('Audio');
+      var audioButton = document.getElementById('audioButton');
+
+      window.addEventListener('DOMContentLoaded', function () {
+        audio.play();
+      });
+
+      function toggleAudio() {
+        if (audio.paused) {
+          audio.play();
+          audioButton.innerHTML = 'Audio';
+          audioButton.style.backgroundColor = 'red';
+        } else {
+          audio.pause();
+          audioButton.innerHTML = 'Audio';
+          audioButton.style.backgroundColor = 'green';
+        }
+      }
+    </script>
+
+    <h1>Gwangalli</h1>
+    <p style="text-align: center">
+      South Korea, a peninsula country surrounded by the sea on three sides, is home to many
+      beautiful beaches. Among them, Gwangalli Beach stands out as a beach with diverse attractions.
+    </p>
+    <button onclick="redirectToWiki()" style="display: block; margin: 0 auto">Information</button>
+    <script>
+      function redirectToWiki() {
+        window.location.href = 'https://en.wikipedia.org/wiki/Gwangalli_Beach';
+      }
+    </script>
+    <hr />
+
+    <h2 id="Photos" style="text-align: center">Photos</h2>
+    <figure>
+      <img alt="Beach" src=".\gwangalli_beach.jpg" width="1000" />
+      <figcaption style="text-align: center">
+        <strong>Gwanganlli Beach</strong>
+        <p>
+          Gwangalli Beach is a picturesque seaside destination located in Busan, South Korea. This
+          beautiful beach offers a harmonious blend of natural beauty and modern amenities, making
+          it a must-visit location for travelers.
+        </p>
+        <p>
+          The beach itself boasts a generous expanse of soft sand, providing the perfect setting for
+          sunbathing, picnicking, or engaging in beach volleyball with friends. The gentle waves
+          that grace the shoreline make Gwangalli Beach an ideal spot for swimming and a variety of
+          water activities. Visitors can rent equipment such as kayaks and paddleboards, allowing
+          them to explore the sea at their own leisurely pace.
+        </p>
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img alt="Bridge" src=".\Busannopicture.jpg" width="1000" />
+      <figcaption style="text-align: center">
+        <strong>Gwangan Bridge</strong>
+        <span
+          ><em>Photo by</em>
+          <a href="https://ko.m.wikipedia.org/wiki/%ED%8C%8C%EC%9D%BC:Busannopicture.jpg"
+            >Sonoda Umi</a
+          ></span
+        >
+        <p>
+          Gwangalli Beach is famous for its breathtaking views, especially during the evening hours.
+          As the sun sets, the Gwangan Bridge, also known as the Diamond Bridge, illuminates the
+          beach and creates a mesmerizing spectacle. The vibrant colors of the bridge reflecting on
+          the calm waters of the beach add a touch of romance and create a picturesque ambiance.
+        </p>
+        <p>
+          <strong><em>Night Race</em></strong>
+        </p>
+        <p>
+          The Gwangan Bridge Night Race is a popular urban running event held in Busan. It takes
+          place at night with the iconic Gwangan Bridge as the backdrop, allowing participants to
+          enjoy the beautiful night scenery while walking or running.
+        </p>
+        <p>
+          The Gwangan Bridge Night Race offers various distances, typically including 5km and 10km
+          routes, allowing participants to choose the distance that suits their ability and goals.
+          Participants start after sunset and run through the city at night, taking in the stunning
+          lights and illuminations of the Gwangan Bridge. It provides a unique experience that
+          combines exercise with the beauty of the cityscape.
+        </p>
+        <p>
+          During the event, there are also entertainment stages, music performances, and festival
+          spaces where participants can enjoy a lively atmosphere with music and entertainment. It
+          creates a festive ambiance and brings together participants to share the energy of the
+          urban environment.
+        </p>
+        <button onclick="redirectToNightRace()">About Night Race</button>
+      </figcaption>
+    </figure>
+
+    <hr />
+
+    <h2 id="Videos" style="text-align: center">Videos</h2>
+    <div style="display: flex; flex-direction: row; justify-content: space-between">
+      <div style="width: 48%">
+        <strong>Gwangalli Fireworks Festival</strong>
+        <iframe
+          width="105%"
+          height="600"
+          src="https://www.youtube.com/embed/lg_FgN5dle4"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <p>
+          One of the highlights of Gwangalli Beach is the annual Gwangalli Fireworks Festival. This
+          festival attracts both locals and tourists who gather along the beach to witness the
+          spectacular display of fireworks against the backdrop of the Gwangan Bridge. The fireworks
+          are synchronized with music, creating a magical and unforgettable experience for all who
+          attend.
+        </p>
+        <p>
+          During the festival, the night sky comes alive with a dazzling array of colors, as the
+          fireworks light up the beach and its surroundings. Many people bring blankets or chairs
+          and set up picnic spots to relax and enjoy the show. The festival also features street
+          food vendors, live performances, and various entertainment activities, adding to the
+          festive atmosphere.
+        </p>
+      </div>
+
+      <div style="width: 48%">
+        <strong>Gwangalli Drone Show</strong>
+        <iframe
+          width="105%"
+          height="600"
+          src="https://www.youtube.com/embed/LTuepjxS0nM"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <p>
+          One of the captivating events at Gwangalli Beach is the mesmerizing Gwangalli Drone Show.
+          This cutting-edge show combines technology and artistry, showcasing a stunning display of
+          drones flying in synchronized patterns against the backdrop of the iconic Gwangan Bridge.
+          The spectacle of lights and movements creates a captivating and unforgettable experience
+          for spectators.
+        </p>
+        <p>
+          During the drone show, the night sky transforms into a canvas as the synchronized drones
+          move gracefully in perfect harmony. The choreographed patterns, vibrant colors, and
+          intricate formations mesmerize the audience, offering a unique and immersive visual
+          spectacle. The combination of music and meticulously designed drone maneuvers adds to the
+          enchanting atmosphere.
+        </p>
+        <p>
+          The Gwangalli Drone Show is a testament to the innovation and creativity that can be
+          achieved through technology. It showcases the harmonious blend of art and science, leaving
+          spectators in awe of the precision and beauty on display. Visitors can gather along the
+          beach to witness this extraordinary show and appreciate the wonders of modern technology.
+        </p>
+      </div>
+    </div>
+
+    <hr />
+    <h2 style="text-align: center">Google Map</h2>
+    <p style="text-align: center">
+      Embrace the fusion of the sun and the sea during the day, and indulge in a lively festival at
+      Gwangalli Beach in the evening
+    </p>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31792.238367842933!2d129.11310847409503!3d35.15372279006014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b5020b6c0e413%3A0x5bcbb95a3003fcbb!2sGwangalli%20Beach!5e0!3m2!1sen!2sus!4v1624899516511!5m2!1sen!2sus"
+      width="600"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+    >
+    </iframe>
+
+    <hr />
+    <h2 id="Reference and Related Links" style="text-align: center">Reference and Related Links</h2>
+    <blockquote>
+      <em></em>Reference
+      <cite><a href="https://en.wikipedia.org/wiki/Gwangalli_Beach">Gwangalli Beach</a></cite>
+      by Wikipedia
+    </blockquote>
+    <strong>Related Links</strong>
+
+    <ul>
+      <li><a href="./honesty.html">honesty.html</a></li>
+      <li><a href="./about.html">about.html</a></li>
+    </ul>
+  </body>
+</html>

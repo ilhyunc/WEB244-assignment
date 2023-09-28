@@ -1,0 +1,9 @@
+/**
+ * Override any styles here that you want to change (optional)...
+ */
+/* Add the following CSS styles to your existing styles.css file or in a <style> tag in your HTML */
+.popup-content img {
+  max-width: 66.67%; /* Reduce the image size to 2/3 */
+  margin-left: auto; /* Align the image to the right side */
+  margin-right: 20px;
+}
